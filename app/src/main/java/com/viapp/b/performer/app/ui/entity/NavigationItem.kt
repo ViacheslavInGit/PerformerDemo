@@ -1,4 +1,4 @@
-package com.viapp.b.performer.ui.entity
+package com.viapp.b.performer.app.ui.entity
 
 import androidx.compose.ui.graphics.vector.ImageVector
 

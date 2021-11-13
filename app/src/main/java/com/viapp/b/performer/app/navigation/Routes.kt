@@ -1,4 +1,4 @@
-package com.viapp.b.performer.navigation
+package com.viapp.b.performer.app.navigation
 
 object Routes {
 

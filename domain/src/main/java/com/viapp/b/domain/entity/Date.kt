@@ -1,4 +1,4 @@
-package com.example.kmmtemplate.domain.entity
+package com.viapp.b.domain.entity
 
 data class Date(
     val year: Int,

@@ -14,7 +14,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.viapp.b.performer.ui.entity.NavigationItem
+import com.viapp.b.performer.app.ui.entity.NavigationItem
 
 @ExperimentalMaterialApi
 @Composable

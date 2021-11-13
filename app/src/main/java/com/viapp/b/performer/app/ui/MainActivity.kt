@@ -1,4 +1,4 @@
-package com.viapp.b.performer.app
+package com.viapp.b.performer.app.ui
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -16,12 +16,24 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.viapp.b.performer.base.BaseActivity
-import com.viapp.b.performer.navigation.Routes
-import com.viapp.b.performer.ui.entity.NavigationItem
+import com.viapp.b.performer.app.BottomNavigationBar
+import com.viapp.b.performer.app.base.BaseActivity
+import com.viapp.b.performer.app.navigation.Routes
+import com.viapp.b.performer.app.ui.entity.NavigationItem
+import com.viapp.b.performer.data.local.PerformerDatabase
+import org.koin.android.ext.android.inject
+import timber.log.Timber
 
 @ExperimentalMaterialApi
 class MainActivity : BaseActivity() {
+
+    val database: PerformerDatabase by inject()
+
+    override fun onResume() {
+        super.onResume()
+
+        Timber.d("### ${database.queriesQueries}");
+    }
 
     @Preview(showBackground = true)
     @Composable
