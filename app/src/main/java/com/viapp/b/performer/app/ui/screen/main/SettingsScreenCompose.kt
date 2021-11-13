@@ -10,7 +10,7 @@ import androidx.compose.ui.tooling.preview.Preview
 
 @Preview
 @Composable
-fun SettingsScreen(
+fun SettingsScreenCompose(
 
 ) {
     Box(

@@ -18,20 +18,20 @@ import com.viapp.b.performer.app.BottomNavigationBar
 import com.viapp.b.performer.app.base.BaseActivity
 import com.viapp.b.performer.app.domain.navigation.Screen
 import com.viapp.b.performer.app.ui.entity.NavigationItem
-import com.viapp.b.performer.app.ui.screen.main.GoalListScreen
-import com.viapp.b.performer.app.ui.screen.main.SettingsScreen
-import com.viapp.b.performer.data.local.PerformerDatabase
-import org.koin.android.ext.android.inject
+import com.viapp.b.performer.app.ui.screen.GoalEditScreenCompose
+import com.viapp.b.performer.app.ui.screen.main.GoalListScreenCompose
+import com.viapp.b.performer.app.ui.screen.main.SettingsScreenCompose
+import org.koin.androidx.compose.getKoin
 
 @ExperimentalMaterialApi
 class MainActivity : BaseActivity() {
-
-    val database: PerformerDatabase by inject()
 
     @Preview(showBackground = true)
     @Composable
     override fun ShowContent() {
         val navController = rememberNavController()
+
+        getKoin().setProperty("navController", navController)
 
         Scaffold(
             bottomBar = { MainBottomNavigationBar(navController = navController) },
@@ -54,12 +54,19 @@ fun MainBottomNavigation(
         navController = navController,
         startDestination = Screen.GoalListScreen.route,
         builder = {
-            composable(route = Screen.GoalListScreen.route) {
-                GoalListScreen()
-            }
-            composable(route = Screen.SettingsScreen.route) {
-                SettingsScreen()
-            }
+            composable(
+                route = Screen.GoalListScreen.route,
+                content = { GoalListScreenCompose() },
+            )
+            composable(
+                route = Screen.GoalEditScreen.route,
+                content = { GoalEditScreenCompose() },
+            )
+            composable(
+                route = Screen.SettingsScreen.route,
+                content = { SettingsScreenCompose() },
+            )
+
         },
         modifier = Modifier.padding(paddingValues = paddingValues),
     )

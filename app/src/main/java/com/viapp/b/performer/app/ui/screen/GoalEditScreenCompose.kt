@@ -8,29 +8,32 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.viapp.b.domain.entity.Date
 import com.viapp.b.domain.entity.Goal
+import com.viapp.b.presentation.GoalEditViewModel
+import org.koin.androidx.compose.inject
 
 @Preview
 @Composable
-private fun GoalEditScreenCompose() {
+fun GoalEditScreenCompose() {
+
+    val goalEditViewModel: GoalEditViewModel by inject()
+
     GoalEditScreenCompose(
-        goal = Goal(
-            name = "Goal name",
-            deadline = Date(0, 0, 0),
-        )
+        goalEditViewModel = goalEditViewModel,
     )
 }
 
 @Composable
-fun GoalEditScreenCompose(
-    goal: Goal,
+private fun GoalEditScreenCompose(
+    goalEditViewModel: GoalEditViewModel
 ) {
+
+
     Scaffold(
 //        floatingActionButton = { GoalListFab(goalListViewModel) },
         content = {
             GoalEditContent(
-                goal = goal,
+                goal = goalEditViewModel.goal.value,
             )
         },
     )
