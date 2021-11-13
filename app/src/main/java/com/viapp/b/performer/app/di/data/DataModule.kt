@@ -1,4 +1,4 @@
-package com.viapp.b.performer.app.di
+package com.viapp.b.performer.app.di.data
 
 import com.squareup.sqldelight.android.AndroidSqliteDriver
 import com.squareup.sqldelight.db.SqlDriver
