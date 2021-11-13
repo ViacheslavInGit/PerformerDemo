@@ -1,7 +1,9 @@
 package com.viapp.b.performer.app
 
 import android.app.Application
-import com.viapp.b.performer.app.di.dataModule
+import com.viapp.b.performer.app.di.data.dataModule
+import com.viapp.b.performer.app.di.domain.domainModule
+import com.viapp.b.performer.app.di.presentation.presentationModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -19,7 +21,11 @@ class AndroidApplication : Application() {
         startKoin {
             androidLogger()
             androidContext(this@AndroidApplication)
-            modules(dataModule)
+            modules(
+                dataModule,
+                domainModule,
+                presentationModule,
+            )
         }
     }
 

@@ -46,6 +46,7 @@ android {
 
 dependencies {
     implementation(project(":data"))
+    implementation(project(":domain"))
     implementation(project(":presentation"))
 
     implementation("androidx.core:core-ktx:1.6.0")
