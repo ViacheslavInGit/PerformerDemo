@@ -1,6 +1,6 @@
 package com.viapp.b.presentation
 
-import com.example.kmmtemplate.domain.entity.Task
+import com.viapp.b.domain.entity.Task
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 

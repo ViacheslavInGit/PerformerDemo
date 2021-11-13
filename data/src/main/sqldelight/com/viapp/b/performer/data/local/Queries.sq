@@ -1,0 +1,14 @@
+import com.viapp.b.domain.entity.Date;
+
+CREATE TABLE DbTask(
+    taks_id INTEGER PRIMARY KEY,
+    name TEXT,
+    data TEXT AS Date
+);
+
+selectAll:
+SELECT * FROM DbTask;
+
+insert:
+INSERT OR IGNORE INTO DbTask(taks_id, name, data)
+VALUES ?;

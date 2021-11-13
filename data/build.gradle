@@ -1,0 +1,27 @@
+plugins {
+    id("java-library")
+    id("kotlin")
+
+    id("com.squareup.sqldelight")
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+sqldelight {
+    PerformerDatabase {
+        packageName = "com.viapp.b.performer.data.local"
+    }
+}
+
+dependencies {
+    implementation(project(":domain"))
+
+    ext.coroutines = "1.5.2-native-mt" //findProperty("version.kotlinx.coroutines")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines")
+
+    ext.sqlDelight = "1.5.2" //findProperty("version.sqlDelight")
+    implementation("com.squareup.sqldelight:coroutines-extensions-jvm:$sqlDelight")
+}

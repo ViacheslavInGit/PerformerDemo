@@ -1,4 +1,4 @@
-package com.viapp.b.performer.app.theme
+package com.viapp.b.performer.app.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

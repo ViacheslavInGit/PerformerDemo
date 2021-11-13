@@ -1,8 +1,14 @@
-package com.example.kmmtemplate.domain.repository
+package com.viapp.b.domain.repository
 
-import com.example.kmmtemplate.domain.entity.Task
+import com.viapp.b.domain.entity.Task
 
 interface TaskRepository {
+
+    /**
+     * insert if task with this [Task.id] doesn`t exist
+     * update if exist
+     */
+    suspend fun save(task: Task)
 
     /**
      * return main (root) tasks, witch contain child tasks
