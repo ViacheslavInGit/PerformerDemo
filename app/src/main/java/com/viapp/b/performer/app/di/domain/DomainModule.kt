@@ -7,6 +7,8 @@ import org.koin.dsl.module
 val domainModule = module {
 
     factory<Router> {
-        AndroidRouter()
+        AndroidRouter(
+            navController = getKoin().getProperty("navController")!!,
+        )
     }
 }

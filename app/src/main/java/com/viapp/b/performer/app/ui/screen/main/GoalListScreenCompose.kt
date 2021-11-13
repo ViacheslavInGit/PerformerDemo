@@ -13,16 +13,16 @@ import org.koin.androidx.compose.inject
 
 @Preview
 @Composable
-fun GoalListScreen() {
+fun GoalListScreenCompose() {
     val goalListViewModel: GoalListViewModel by inject()
 
-    GoalListScreen(
+    GoalListScreenCompose(
         goalListViewModel = goalListViewModel,
     )
 }
 
 @Composable
-private fun GoalListScreen(
+private fun GoalListScreenCompose(
     goalListViewModel: GoalListViewModel,
 ) {
 
