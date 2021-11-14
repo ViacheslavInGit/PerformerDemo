@@ -4,17 +4,19 @@ import com.viapp.b.presentation.GoalEditViewModel
 import com.viapp.b.presentation.GoalListViewModel
 import org.koin.dsl.module
 
-val presentationModule = module {
+val viewModelModule = module {
 
     factory {
         GoalEditViewModel(
             router = get(),
+            saveGoal = get(),
         )
     }
 
     factory {
         GoalListViewModel(
             router = get(),
+            getGoals = get(),
         )
     }
 }
