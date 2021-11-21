@@ -34,7 +34,7 @@ private fun GoalListScreenCompose(
 
     Scaffold(
         floatingActionButton = { GoalListFab(goalListViewModel) },
-        content = {},
+        content = { GoalListContent(goalListViewModel) },
     )
 }
 
