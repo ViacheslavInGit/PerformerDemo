@@ -10,7 +10,6 @@ val repositoryModule = module {
         GoalRepositoryImpl(
             queries = get(),
             goalFromDb = get(),
-            goalToDb = get(),
         )
     }
 }
