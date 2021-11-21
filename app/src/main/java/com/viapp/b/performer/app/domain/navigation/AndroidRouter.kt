@@ -10,4 +10,8 @@ class AndroidRouter(
     override fun openTaskCreationScreen() {
         navController.navigate(Screen.GoalEditScreen.route)
     }
+
+    override fun back() {
+        navController.popBackStack()
+    }
 }

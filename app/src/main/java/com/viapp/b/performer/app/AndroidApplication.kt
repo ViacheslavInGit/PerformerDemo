@@ -1,9 +1,9 @@
 package com.viapp.b.performer.app
 
 import android.app.Application
-import com.viapp.b.performer.app.di.data.dataModule
-import com.viapp.b.performer.app.di.domain.domainModule
-import com.viapp.b.performer.app.di.presentation.presentationModule
+import com.viapp.b.performer.app.di.data.dataModules
+import com.viapp.b.performer.app.di.domain.domainModules
+import com.viapp.b.performer.app.di.presentation.presentationModules
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -22,9 +22,11 @@ class AndroidApplication : Application() {
             androidLogger()
             androidContext(this@AndroidApplication)
             modules(
-                dataModule,
-                domainModule,
-                presentationModule,
+                mutableListOf(
+                    dataModules,
+                    domainModules,
+                    presentationModules,
+                ).flatten()
             )
         }
     }

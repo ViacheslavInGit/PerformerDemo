@@ -18,7 +18,7 @@ import com.viapp.b.performer.app.BottomNavigationBar
 import com.viapp.b.performer.app.base.BaseActivity
 import com.viapp.b.performer.app.domain.navigation.Screen
 import com.viapp.b.performer.app.ui.entity.NavigationItem
-import com.viapp.b.performer.app.ui.screen.GoalEditScreenCompose
+import com.viapp.b.performer.app.ui.screen.goalEdit.GoalEditScreenCompose
 import com.viapp.b.performer.app.ui.screen.main.GoalListScreenCompose
 import com.viapp.b.performer.app.ui.screen.main.SettingsScreenCompose
 import org.koin.androidx.compose.getKoin

@@ -1,0 +1,18 @@
+import com.viapp.b.domain.entity.Date;
+
+CREATE TABLE DbGoal(
+    goal_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    deadline TEXT AS Date
+);
+
+selectAll:
+SELECT * FROM DbGoal;
+
+-- insert:
+-- INSERT OR IGNORE INTO DbGoal(goal_id, name, deadline)
+-- VALUES ?;
+
+insert:
+INSERT OR IGNORE INTO DbGoal
+VALUES (?,?,?);
