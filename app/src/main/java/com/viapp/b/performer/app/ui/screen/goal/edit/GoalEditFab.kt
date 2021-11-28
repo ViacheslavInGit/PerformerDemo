@@ -1,4 +1,4 @@
-package com.viapp.b.performer.app.ui.screen.goalEdit
+package com.viapp.b.performer.app.ui.screen.goal.edit
 
 import androidx.compose.material.FloatingActionButton
 import androidx.compose.material.Icon

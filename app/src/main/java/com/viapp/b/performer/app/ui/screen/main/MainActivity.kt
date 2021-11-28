@@ -1,4 +1,4 @@
-package com.viapp.b.performer.app.ui
+package com.viapp.b.performer.app.ui.screen.main
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
@@ -14,13 +14,12 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.viapp.b.performer.app.BottomNavigationBar
 import com.viapp.b.performer.app.base.BaseActivity
 import com.viapp.b.performer.app.domain.navigation.Screen
 import com.viapp.b.performer.app.ui.entity.NavigationItem
-import com.viapp.b.performer.app.ui.screen.goalEdit.GoalEditScreenCompose
-import com.viapp.b.performer.app.ui.screen.main.GoalListScreenCompose
-import com.viapp.b.performer.app.ui.screen.main.SettingsScreenCompose
+import com.viapp.b.performer.app.ui.screen.goal.edit.GoalEditScreenCompose
+import com.viapp.b.performer.app.ui.screen.goal.list.GoalListScreenCompose
+import com.viapp.b.performer.app.ui.screen.settings.SettingsScreenCompose
 import org.koin.androidx.compose.getKoin
 
 @ExperimentalMaterialApi
@@ -56,7 +55,7 @@ fun MainBottomNavigation(
         builder = {
             composable(
                 route = Screen.GoalListScreen.route,
-                content = { GoalListScreenCompose() },
+                content = { GoalListScreenCompose.Draw() },
             )
             composable(
                 route = Screen.GoalEditScreen.route,

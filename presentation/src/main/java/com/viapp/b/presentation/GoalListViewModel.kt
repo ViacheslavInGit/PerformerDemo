@@ -29,9 +29,6 @@ class GoalListViewModel(
     private fun updateGoalList() {
         scope.launch {
             goalListMutableStateFlow.value = getGoals()
-
-            println("### goals = ${goalListFlow.value}")
-
         }.executeUnique(jobName = "updateGoalList")
     }
 }

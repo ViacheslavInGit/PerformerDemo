@@ -1,4 +1,4 @@
-package com.viapp.b.performer.app.ui.screen.goalEdit
+package com.viapp.b.performer.app.ui.screen.goal.edit
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -9,7 +9,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.viapp.b.domain.entity.Goal
 import com.viapp.b.performer.app.ui.view.TransparentHintTextField
 import com.viapp.b.presentation.GoalEditViewModel
 

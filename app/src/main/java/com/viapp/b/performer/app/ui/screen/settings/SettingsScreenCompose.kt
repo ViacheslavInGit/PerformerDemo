@@ -1,4 +1,4 @@
-package com.viapp.b.performer.app.ui.screen.main
+package com.viapp.b.performer.app.ui.screen.settings
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
