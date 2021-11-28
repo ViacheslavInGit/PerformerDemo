@@ -1,4 +1,4 @@
-package com.viapp.b.performer.app.ui.screen.goalEdit
+package com.viapp.b.performer.app.ui.screen.goal.edit
 
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable

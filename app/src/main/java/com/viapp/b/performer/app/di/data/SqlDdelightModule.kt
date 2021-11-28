@@ -2,6 +2,7 @@ package com.viapp.b.performer.app.di.data
 
 import com.squareup.sqldelight.android.AndroidSqliteDriver
 import com.squareup.sqldelight.db.SqlDriver
+import com.viapp.b.performer.app.data.sqldelight.AndroidOpenHelperCallback
 import com.viapp.b.performer.data.local.DateAdapter
 import com.viapp.b.performer.data.local.DbGoal
 import com.viapp.b.performer.data.local.DbTask
@@ -13,10 +14,13 @@ import org.koin.dsl.module
 val sqlDelightModule = module {
 
     single<SqlDriver> {
+        val schema = PerformerDatabase.Schema
+
         AndroidSqliteDriver(
-            PerformerDatabase.Schema,
-            androidContext(),
+            schema = schema,
+            context = androidContext(),
             name = "PerformerDatabase",
+            callback = AndroidOpenHelperCallback(schema),
         )
     }
 
@@ -40,8 +44,8 @@ val sqlDelightModule = module {
         )
     }
 
-    single<GoalQueries>{
-        val database : PerformerDatabase = get()
+    single<GoalQueries> {
+        val database: PerformerDatabase = get()
         database.goalQueries
     }
 }
