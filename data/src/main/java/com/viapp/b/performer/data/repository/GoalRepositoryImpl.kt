@@ -14,7 +14,9 @@ class GoalRepositoryImpl(
         queries.insert(
             goal_id = goal.id,
             name = goal.name,
+            description = goal.description,
             deadline = goal.deadline,
+            color = goal.color.toLong(),
         )
     }
 
@@ -23,5 +25,8 @@ class GoalRepositoryImpl(
             .selectAll()
             .executeAsList()
             .map(goalFromDb)
+            .apply {
+                println("####goals $size")
+            }
     }
 }

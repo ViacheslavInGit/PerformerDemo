@@ -3,7 +3,9 @@ import com.viapp.b.domain.entity.Date;
 CREATE TABLE DbGoal(
     goal_id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
-    deadline TEXT AS Date
+    description TEXT,
+    deadline TEXT AS Date,
+    color INTEGER
 );
 
 selectAll:
@@ -15,4 +17,4 @@ SELECT * FROM DbGoal;
 
 insert:
 INSERT OR IGNORE INTO DbGoal
-VALUES (?,?,?);
+VALUES (?,?,?,?,?);

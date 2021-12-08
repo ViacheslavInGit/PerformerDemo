@@ -1,6 +1,7 @@
 package com.viapp.b.performer.app.ui.screen.goal.list
 
 import androidx.compose.material.Scaffold
+import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import com.viapp.b.presentation.GoalListViewModel
@@ -26,7 +27,10 @@ object GoalListScreenCompose {
         goalListViewModel: GoalListViewModel,
     ) {
 
+        val scaffoldState = rememberScaffoldState()
+
         Scaffold(
+            scaffoldState = scaffoldState,
             floatingActionButton = { CreateFab(goalListViewModel) },
             content = { CreateGoalList(goalListViewModel) },
         )
