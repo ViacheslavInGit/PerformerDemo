@@ -10,6 +10,8 @@ class GoalFromDbMapper : (DbGoal) -> Goal {
         Goal(
             id = dbGoal.goal_id,
             name = dbGoal.name ?: "",
+            description = dbGoal.description ?: "",
             deadline = dbGoal.deadline ?: Date.empty,
+            color = dbGoal.color?.toInt() ?: Goal.DEFAULT_COLOR,
         )
 }
