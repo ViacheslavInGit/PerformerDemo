@@ -3,6 +3,8 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.8">
       <module name="Performer.app" target="11" />
+      <module name="Performer.test.domain" target="11" />
+      <module name="Performer.test.presentation" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
