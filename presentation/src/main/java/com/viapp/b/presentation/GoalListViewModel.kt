@@ -23,7 +23,7 @@ class GoalListViewModel(
     }
 
     fun onAddClick() {
-        //router.openTaskCreationScreen()
+        router.openTaskCreationScreen()
     }
 
     private fun updateGoalList() {
